@@ -1,0 +1,128 @@
+:root {
+    --succes-color: #008dde;;
+    --error-color: #e74c3c;
+}
+
+body {
+    background: #f4f4f4;
+    color: #5a5656;
+    display: grid;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.container {
+    margin: 50px auto;
+    width: 400px;
+
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.form {
+    padding: 10px;
+}
+
+.form-item {
+    margin-bottom: 10px;
+}
+
+.form-item label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-item input {
+    appearance: none;
+    background: #e5e5e5;
+    border: none;
+    border-radius: 3px;
+    color: #5a5656;
+    font-family: inherit;
+    font-size: 14px;
+    height: 50px;
+    outline: none;
+    padding: 0 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.form-item input:focus {
+    outline: 0;
+    border-color: #777;
+
+}
+
+.error-message {
+    font-size: 15px;
+}
+
+.form-item.success input {
+    border: 2px solid var(--succes-color);
+    border-radius: 3px;
+
+
+}
+
+.form-item.error input {
+    border: 2px solid var(--error-color);
+    border-radius: 3px;
+}
+
+.form-item .error-message {
+    color: var(--error-color);
+    /*position: absolute;*/
+    /*bottom: 7px;*/
+    /*left: 0;*/
+    visibility: hidden;
+}
+
+.form-item.error .error-message {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    appearance: none;
+    background-color: #008dde;
+    border: none;
+    border-radius: 3px;
+    color: #f4f4f4;
+    font-family: inherit;
+    height: 50px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 370px;
+}
+
+@media (max-width: 576px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .form-item input {
+        max-width: calc(100% - 30px);
+        width: 100%;
+        height: 40px;
+    }
+
+    .form button {
+        max-width: calc(100% - 12px);
+    }
+
+    .error-message {
+        font-size: 13px;
+    }
+
+}
