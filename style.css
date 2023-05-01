@@ -15,7 +15,6 @@ body {
 .container {
     margin: 50px auto;
     width: 400px;
-
 }
 
 h2 {
@@ -77,9 +76,6 @@ h2 {
 
 .form-item .error-message {
     color: var(--error-color);
-    /*position: absolute;*/
-    /*bottom: 7px;*/
-    /*left: 0;*/
     visibility: hidden;
 }
 
